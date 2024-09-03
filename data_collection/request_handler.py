@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 
 from fake_useragent import UserAgent
 
+import traceback
 
 class RequestHandler:
     def __init__(self, url):
@@ -19,16 +20,16 @@ class RequestHandler:
             content_type = response.headers.get('Content-Type', '')
 
             if 'application/json' in content_type:
-                # return self._parse_json(response.text)
                 return response.text
             elif 'application/xml' in content_type or 'text/xml' in content_type:
-                #return self._parse_xml(response.text)
-                return response.text
+                xml_data = response.content.decode('windows-1251')
+                return xml_data
             else:
                 print("Unsupported Content-Type:", content_type)
                 return None
-            
+
         except requests.RequestException as e:
             print('-'*128)
-            print(f"[Error] Request failed: {e}")
+            print(f"[ERROR] Request failed: {e}")
+            traceback.print_exc()
             return None
