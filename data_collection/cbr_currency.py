@@ -1,32 +1,16 @@
-import requests
-from fake_useragent import UserAgent
 import xml.etree.ElementTree as ET
 import json
 
+from request_handler import RequestHandler
 
-def fetch_exchange_rates():
-    url = "http://www.cbr.ru/scripts/XML_daily.asp?date_req="
-    headers = {
-        'User-Agent': UserAgent().random
-    }
-    try:
-        response = requests.get(url=url, headers=headers)
-        response.raise_for_status()
-        xml_data = response.content
-        return xml_data
-    except requests.exceptions.HTTPError as http_err:
-        print(f"[ERROR] HTTP ошибка: {http_err}")
-    except requests.exceptions.ConnectionError as conn_err:
-        print(f"[ERROR] Ошибка подключения: {conn_err}")
-    except requests.exceptions.Timeout as timeout_err:
-        print(f"[ERROR] Ошибка таймаута: {timeout_err}")
-    except requests.exceptions.RequestException as req_err:
-        print(f"[ERROR] Неизвестная ошибка: {req_err}")
-    return None
+# URL для получения ежедневных курсов валют с сайта Центрального банка России (ЦБР)
+url = "http://www.cbr.ru/scripts/XML_daily.asp?date_req="
 
 def parse_exchange_rates():
-    xml_data = fetch_exchange_rates()
+    request_handler = RequestHandler(url)
+    xml_data = request_handler.fetch_data()
 
+    # TODO rewrite
     if xml_data:
         root = ET.fromstring(xml_data)
         date = root.attrib.get("Date")
@@ -47,7 +31,22 @@ def parse_exchange_rates():
             }
         return date, rates
     else:
-        return "[ERROR] No xml data."   
+        return "[ERROR] No xml data."
+    
+# def _parse_xml(data):
+#     try:
+#         root = ET.fromstring(data)
+#         return self._xml_to_dict(root)
+#     except ET.ParseError as e:
+#         print(f"XML parsing failed: {e}")
+#         return None
+
+# def _xml_to_dict(element):
+#     def parse_element(elem):
+#         if len(elem) == 0:
+#             return elem.text
+#         return {child.tag: parse_element(child) for child in elem}
+#     return {element.tag: parse_element(element)}
 
 def convert_to_json(date, rates):
     data = {
@@ -71,3 +70,27 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    # def _parse_json(self, data):
+    #     try:
+    #         return json.loads(data)
+    #     except json.JSONDecodeError as e:
+    #         print(f"JSON decoding failed: {e}")
+    #         return None
+
+    # def _parse_xml(self, data):
+    #     try:
+    #         root = ET.fromstring(data)
+    #         return self._xml_to_dict(root)
+    #     except ET.ParseError as e:
+    #         print(f"XML parsing failed: {e}")
+    #         return None
+
+    # def _xml_to_dict(self, element):
+    #     def parse_element(elem):
+    #         if len(elem) == 0:
+    #             return elem.text
+    #         return {child.tag: parse_element(child) for child in elem}
+
+    #     return {element.tag: parse_element(element)}
