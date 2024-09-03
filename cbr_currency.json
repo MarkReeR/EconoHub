@@ -1,0 +1,13 @@
+{
+    "date": "date",
+    "rates": {
+        "CharCode": {
+            "id": "ID",
+            "num_code": "NumCode",
+            "name": "Name",
+            "nominal": "Nominal",
+            "value": "Value",
+            "unit_rate": "VunitRate"
+        }
+    }
+}
