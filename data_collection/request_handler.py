@@ -14,13 +14,13 @@ class RequestHandler:
     def fetch_data(self):
         try:
             headers = {'User-Agent': self.ua.random}
-            response = requests.get(self.url, headers=headers)
+            response = requests.get(self.url, headers=headers, timeout=10)
             response.raise_for_status()
-
+                        
             content_type = response.headers.get('Content-Type', '')
 
             if 'application/json' in content_type:
-                return response.text
+                return response.json()
             elif 'application/xml' in content_type or 'text/xml' in content_type:
                 xml_data = response.content.decode('windows-1251')
                 return xml_data
@@ -29,7 +29,6 @@ class RequestHandler:
                 return None
 
         except requests.RequestException as e:
-            print('-'*128)
             print(f"[ERROR] Request failed: {e}")
             traceback.print_exc()
             return None
