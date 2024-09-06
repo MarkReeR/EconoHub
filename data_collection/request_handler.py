@@ -32,3 +32,14 @@ class RequestHandler:
             print(f"[ERROR] Request failed: {e}")
             traceback.print_exc()
             return None
+        
+        
+def start_request(url):
+    print("[INFO] Sending GET request...")
+    raw_data = RequestHandler(url).fetch_data()
+    if not raw_data:
+            print("[ERROR] Failed to fetch data.")
+            return
+    print("[INFO] Successfully retrieved data.")
+    return raw_data
+    

@@ -1,24 +1,18 @@
-from request_handler import RequestHandler
-import json
 from datetime import datetime
+
+from request_handler import start_request
+from save_data import save_data
 
 def parse_moex_data():
     moex_url = 'https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities.json'
     filename = 'moex_stock.json'
     
-    print("[INFO] Sending GET request...")
-    request_handler = RequestHandler(moex_url)
-    raw_data = request_handler.fetch_data()
-    
-    if not raw_data:
-        print("[ERROR] Failed to fetch data.")
-        return
-    
+    raw_data = start_request(moex_url)
     print("[INFO] Processing stock data...")
     processed_data = process_stock_data(raw_data)
     
     if processed_data:
-        save_to_json(processed_data, filename)
+        save_data(processed_data, filename)
         print("[INFO] Data processing complete.")
     else:
         print("[ERROR] No data to save.")
@@ -44,14 +38,6 @@ def process_stock_data(data):
         "date": datetime.now().strftime('%d.%m.%Y %H:%M:%S'),
         "rates": securities_dict
     }
-
-def save_to_json(data, filename='moex_stock.json'):
-    try:
-        with open(filename, 'w', encoding='utf-8') as json_file:
-            json.dump(data, json_file, ensure_ascii=False, indent=4)
-        print(f"[INFO] Data successfully saved to {filename}.")
-    except IOError as e:
-        print(f"[ERROR] Failed to save data to {filename}: {e}")
 
 if __name__ == "__main__":
     parse_moex_data()

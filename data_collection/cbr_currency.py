@@ -1,32 +1,31 @@
 import xml.etree.ElementTree as ET
-import json
 
-from request_handler import RequestHandler
+from request_handler import start_request
+from save_data import save_data
 
-# URL для получения ежедневных курсов валют с сайта Центрального банка России (ЦБР)
-CBR_URL = "http://www.cbr.ru/scripts/XML_daily.asp?date_req="
 
-def parse_exchange_rates(url):
-    request_handler = RequestHandler(url)
-    xml_data = request_handler.fetch_data()
-
-    if not xml_data:
-        print("[ERROR] Не удалось получить данные.")
-        return None, None
+def parse_exchange_rates():
+    # URL для получения ежедневных курсов валют с сайта Центрального банка России (ЦБР)
+    url = "http://www.cbr.ru/scripts/XML_daily.asp?date_req="
+    filename = 'cbr_currency.json'
+            
+    raw_data = parse_xml(start_request(url))
+    print("[INFO] XML parsing completed successfully.")
+    processed_data = extract_date_and_rates(raw_data)
     
-    print("[INFO] Удалось получить данные.")
-        
-    parsed_data = parse_xml(xml_data)
-    if not parsed_data:
-        print("[ERROR] Парсинг XML неудачен.")
-        return None, None
-    
-    print("[INFO] Парсинг XML успешно завершен.")
-    return extract_date_and_rates(parsed_data)
+    if processed_data:
+        save_data(processed_data, filename)
+        print("[INFO] Data processing complete.")
+    else:
+        print("[ERROR] No data to save.")
 
 def extract_date_and_rates(parsed_data):
+    if not parsed_data:
+        print("[ERROR] XML parsing failed.")
+        return
+    
     val_curs = parsed_data.get('ValCurs', {})
-    date = val_curs.get('@Date', 'Дата отсутствует')
+    date = val_curs.get('@Date')
     rates = {}
     
     for valute in val_curs.get('Valute', []):
@@ -46,21 +45,15 @@ def extract_date_and_rates(parsed_data):
             'value': value,
             'unit_rate': unit_rate,
         }
-    
-    if date == 'Дата отсутствует':
-        print("[ERROR] Не удалось извлечь дату из данных.")
-    else:
-        print(f"[INFO] Данные получены для {date}.")
-        save_rates_to_file(date, rates)
-    
-    return date, rates
+    print(f"[INFO] Data received for {date}.")
+    return {'date': date, 'rates': rates}
 
 def parse_xml(data):
     try:
         root = ET.fromstring(data)
         return xml_to_dict(root)
     except ET.ParseError as e:
-        print(f"[ERROR] Ошибка парсинга XML: {e}")
+        print(f"[ERROR] XML parsing error: {e}")
         return None
 
 def xml_to_dict(element):
@@ -83,10 +76,5 @@ def xml_to_dict(element):
 
     return {element.tag: parse_element(element)}
 
-def save_rates_to_file(date, rates, filename='cbr_currency.json'):
-    with open(filename, 'w', encoding='utf-8') as f:
-        json.dump({'date': date, 'rates': rates}, f, ensure_ascii=False, indent=4) 
-    print(f"[INFO] Курсы валют на {date} успешно сохранены в файл '{filename}'.")
-
 if __name__ == "__main__":
-    date, rates = parse_exchange_rates(CBR_URL)
+    parse_exchange_rates()
