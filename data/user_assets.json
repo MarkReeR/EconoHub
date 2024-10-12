@@ -1,0 +1,20 @@
+{
+    "assets": [
+        {
+            "SECID": "sber",
+            "quantity": 1
+        },
+        {
+            "SECID": "ABIO",
+            "quantity": 1
+        },
+        {
+            "SECID": "SBER",
+            "quantity": 1
+        },
+        {
+            "SECID": "SBERSBER",
+            "quantity": 1
+        }
+    ]
+}
