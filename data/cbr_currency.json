@@ -1,349 +1,349 @@
 {
-    "date": "06.09.2024",
+    "date": "12.10.2024",
     "rates": {
         "AUD": {
             "id": "R01010",
             "num_code": "036",
             "name": "Австралийский доллар",
             "nominal": 1,
-            "value": 60.3083,
-            "unit_rate": 60.3083
+            "value": 64.7887,
+            "unit_rate": 64.7887
         },
         "AZN": {
             "id": "R01020A",
             "num_code": "944",
             "name": "Азербайджанский манат",
             "nominal": 1,
-            "value": 52.7673,
-            "unit_rate": 52.7673
+            "value": 56.5109,
+            "unit_rate": 56.5109
         },
         "GBP": {
             "id": "R01035",
             "num_code": "826",
             "name": "Фунт стерлингов Соединенного королевства",
             "nominal": 1,
-            "value": 118.06,
-            "unit_rate": 118.06
+            "value": 125.3599,
+            "unit_rate": 125.3599
         },
         "AMD": {
             "id": "R01060",
             "num_code": "051",
             "name": "Армянских драмов",
             "nominal": 100,
-            "value": 23.1615,
-            "unit_rate": 0.231615
+            "value": 24.813,
+            "unit_rate": 0.24813
         },
         "BYN": {
             "id": "R01090B",
             "num_code": "933",
             "name": "Белорусский рубль",
             "nominal": 1,
-            "value": 28.3364,
-            "unit_rate": 28.3364
+            "value": 29.2607,
+            "unit_rate": 29.2607
         },
         "BGN": {
             "id": "R01100",
             "num_code": "975",
             "name": "Болгарский лев",
             "nominal": 1,
-            "value": 50.681,
-            "unit_rate": 50.681
+            "value": 53.6969,
+            "unit_rate": 53.6969
         },
         "BRL": {
             "id": "R01115",
             "num_code": "986",
             "name": "Бразильский реал",
             "nominal": 1,
-            "value": 15.9175,
-            "unit_rate": 15.9175
+            "value": 17.2117,
+            "unit_rate": 17.2117
         },
         "HUF": {
             "id": "R01135",
             "num_code": "348",
             "name": "Венгерских форинтов",
             "nominal": 100,
-            "value": 25.3388,
-            "unit_rate": 0.253388
+            "value": 26.2368,
+            "unit_rate": 0.262368
         },
         "VND": {
             "id": "R01150",
             "num_code": "704",
             "name": "Вьетнамских донгов",
             "nominal": 10000,
-            "value": 37.0343,
-            "unit_rate": 0.00370343
+            "value": 39.7388,
+            "unit_rate": 0.00397388
         },
         "HKD": {
             "id": "R01200",
             "num_code": "344",
             "name": "Гонконгский доллар",
             "nominal": 1,
-            "value": 11.5309,
-            "unit_rate": 11.5309
+            "value": 12.3832,
+            "unit_rate": 12.3832
         },
         "GEL": {
             "id": "R01210",
             "num_code": "981",
             "name": "Грузинский лари",
             "nominal": 1,
-            "value": 33.2781,
-            "unit_rate": 33.2781
+            "value": 35.2481,
+            "unit_rate": 35.2481
         },
         "DKK": {
             "id": "R01215",
             "num_code": "208",
             "name": "Датская крона",
             "nominal": 1,
-            "value": 13.2864,
-            "unit_rate": 13.2864
+            "value": 14.0795,
+            "unit_rate": 14.0795
         },
         "AED": {
             "id": "R01230",
             "num_code": "784",
             "name": "Дирхам ОАЭ",
             "nominal": 1,
-            "value": 24.426,
-            "unit_rate": 24.426
+            "value": 26.1589,
+            "unit_rate": 26.1589
         },
         "USD": {
             "id": "R01235",
             "num_code": "840",
             "name": "Доллар США",
             "nominal": 1,
-            "value": 89.7044,
-            "unit_rate": 89.7044
+            "value": 96.0686,
+            "unit_rate": 96.0686
         },
         "EUR": {
             "id": "R01239",
             "num_code": "978",
             "name": "Евро",
             "nominal": 1,
-            "value": 99.1927,
-            "unit_rate": 99.1927
+            "value": 105.1095,
+            "unit_rate": 105.1095
         },
         "EGP": {
             "id": "R01240",
             "num_code": "818",
             "name": "Египетских фунтов",
             "nominal": 10,
-            "value": 18.5183,
-            "unit_rate": 1.85183
+            "value": 19.7779,
+            "unit_rate": 1.97779
         },
         "INR": {
             "id": "R01270",
             "num_code": "356",
             "name": "Индийских рупий",
             "nominal": 10,
-            "value": 10.6813,
-            "unit_rate": 1.06813
+            "value": 11.4288,
+            "unit_rate": 1.14288
         },
         "IDR": {
             "id": "R01280",
             "num_code": "360",
             "name": "Индонезийских рупий",
             "nominal": 10000,
-            "value": 57.9112,
-            "unit_rate": 0.00579112
+            "value": 61.3543,
+            "unit_rate": 0.00613543
         },
         "KZT": {
             "id": "R01335",
             "num_code": "398",
             "name": "Казахстанских тенге",
             "nominal": 100,
-            "value": 18.5504,
-            "unit_rate": 0.185504
+            "value": 19.5723,
+            "unit_rate": 0.195723
         },
         "CAD": {
             "id": "R01350",
             "num_code": "124",
             "name": "Канадский доллар",
             "nominal": 1,
-            "value": 66.3249,
-            "unit_rate": 66.3249
+            "value": 69.8478,
+            "unit_rate": 69.8478
         },
         "QAR": {
             "id": "R01355",
             "num_code": "634",
             "name": "Катарский риал",
             "nominal": 1,
-            "value": 24.6441,
-            "unit_rate": 24.6441
+            "value": 26.3925,
+            "unit_rate": 26.3925
         },
         "KGS": {
             "id": "R01370",
             "num_code": "417",
             "name": "Киргизских сомов",
             "nominal": 10,
-            "value": 10.6499,
-            "unit_rate": 1.06499
+            "value": 11.2361,
+            "unit_rate": 1.12361
         },
         "CNY": {
             "id": "R01375",
             "num_code": "156",
             "name": "Китайский юань",
             "nominal": 1,
-            "value": 12.5054,
-            "unit_rate": 12.5054
+            "value": 13.4752,
+            "unit_rate": 13.4752
         },
         "MDL": {
             "id": "R01500",
             "num_code": "498",
             "name": "Молдавских леев",
             "nominal": 10,
-            "value": 51.2904,
-            "unit_rate": 5.12904
+            "value": 54.3719,
+            "unit_rate": 5.43719
         },
         "NZD": {
             "id": "R01530",
             "num_code": "554",
             "name": "Новозеландский доллар",
             "nominal": 1,
-            "value": 55.5808,
-            "unit_rate": 55.5808
+            "value": 58.573,
+            "unit_rate": 58.573
         },
         "NOK": {
             "id": "R01535",
             "num_code": "578",
             "name": "Норвежских крон",
             "nominal": 10,
-            "value": 83.9669,
-            "unit_rate": 8.39669
+            "value": 89.0621,
+            "unit_rate": 8.90621
         },
         "PLN": {
             "id": "R01565",
             "num_code": "985",
             "name": "Польский злотый",
             "nominal": 1,
-            "value": 23.3077,
-            "unit_rate": 23.3077
+            "value": 24.5048,
+            "unit_rate": 24.5048
         },
         "RON": {
             "id": "R01585F",
             "num_code": "946",
             "name": "Румынский лей",
             "nominal": 1,
-            "value": 20.0238,
-            "unit_rate": 20.0238
+            "value": 21.1274,
+            "unit_rate": 21.1274
         },
         "XDR": {
             "id": "R01589",
             "num_code": "960",
             "name": "СДР (специальные права заимствования)",
             "nominal": 1,
-            "value": 120.6004,
-            "unit_rate": 120.6004
+            "value": 128.5753,
+            "unit_rate": 128.5753
         },
         "SGD": {
             "id": "R01625",
             "num_code": "702",
             "name": "Сингапурский доллар",
             "nominal": 1,
-            "value": 68.8498,
-            "unit_rate": 68.8498
+            "value": 73.5989,
+            "unit_rate": 73.5989
         },
         "TJS": {
             "id": "R01670",
             "num_code": "972",
             "name": "Таджикских сомони",
             "nominal": 10,
-            "value": 84.1363,
-            "unit_rate": 8.41363
+            "value": 90.1004,
+            "unit_rate": 9.01004
         },
         "THB": {
             "id": "R01675",
             "num_code": "764",
             "name": "Таиландских батов",
             "nominal": 10,
-            "value": 26.5256,
-            "unit_rate": 2.65256
+            "value": 28.839,
+            "unit_rate": 2.8839
         },
         "TRY": {
             "id": "R01700J",
             "num_code": "949",
             "name": "Турецких лир",
             "nominal": 10,
-            "value": 26.3812,
-            "unit_rate": 2.63812
+            "value": 28.1042,
+            "unit_rate": 2.81042
         },
         "TMT": {
             "id": "R01710A",
             "num_code": "934",
             "name": "Новый туркменский манат",
             "nominal": 1,
-            "value": 25.6298,
-            "unit_rate": 25.6298
+            "value": 27.4482,
+            "unit_rate": 27.4482
         },
         "UZS": {
             "id": "R01717",
             "num_code": "860",
             "name": "Узбекских сумов",
             "nominal": 10000,
-            "value": 70.9111,
-            "unit_rate": 0.00709111
+            "value": 75.2399,
+            "unit_rate": 0.00752399
         },
         "UAH": {
             "id": "R01720",
             "num_code": "980",
             "name": "Украинских гривен",
             "nominal": 10,
-            "value": 21.7325,
-            "unit_rate": 2.17325
+            "value": 23.3135,
+            "unit_rate": 2.33135
         },
         "CZK": {
             "id": "R01760",
             "num_code": "203",
             "name": "Чешских крон",
             "nominal": 10,
-            "value": 39.8049,
-            "unit_rate": 3.98049
+            "value": 41.5468,
+            "unit_rate": 4.15468
         },
         "SEK": {
             "id": "R01770",
             "num_code": "752",
             "name": "Шведских крон",
             "nominal": 10,
-            "value": 86.8665,
-            "unit_rate": 8.68665
+            "value": 92.4044,
+            "unit_rate": 9.24044
         },
         "CHF": {
             "id": "R01775",
             "num_code": "756",
             "name": "Швейцарский франк",
             "nominal": 1,
-            "value": 106.021,
-            "unit_rate": 106.021
+            "value": 112.2166,
+            "unit_rate": 112.2166
         },
         "RSD": {
             "id": "R01805F",
             "num_code": "941",
             "name": "Сербских динаров",
             "nominal": 100,
-            "value": 84.9486,
-            "unit_rate": 0.849486
+            "value": 89.7863,
+            "unit_rate": 0.897863
         },
         "ZAR": {
             "id": "R01810",
             "num_code": "710",
             "name": "Южноафриканских рэндов",
             "nominal": 10,
-            "value": 50.5016,
-            "unit_rate": 5.05016
+            "value": 55.0331,
+            "unit_rate": 5.50331
         },
         "KRW": {
             "id": "R01815",
             "num_code": "410",
             "name": "Вон Республики Корея",
             "nominal": 1000,
-            "value": 66.8438,
-            "unit_rate": 0.0668438
+            "value": 71.1936,
+            "unit_rate": 0.0711936
         },
         "JPY": {
             "id": "R01820",
             "num_code": "392",
             "name": "Японских иен",
             "nominal": 100,
-            "value": 62.4031,
-            "unit_rate": 0.624031
+            "value": 64.6274,
+            "unit_rate": 0.646274
         }
     }
 }
